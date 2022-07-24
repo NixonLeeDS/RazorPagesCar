@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Car</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+
+    <style>
+        .button2 {
+            margin-left: 25px;
+            width: 125px;
+            height: 34px;
+            border: 1px solid #808080;
+            text-align: center;
+            border-radius: 25px;
+            float: left;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .button1 {
+            margin-left: 375px;
+            width: 175px;
+            height: 34px;
+            border: 1px solid #808080;
+            text-align: center;
+            border-radius: 25px;
+            float: left;
+            transition: all 0.3s ease-in-out;
+        }
+
+            .button1:hover {
+                background-color: #808080;
+                color: #ffffff !important;
+                cursor: pointer;
+            }
+
+        .button2:hover {
+            background-color: #808080;
+            color: #ffffff !important;
+            cursor: pointer;
+        }
+
+        a.buttontext {
+            color: #000000;
+            text-decoration-line: none;
+        }
+
+            a.buttontext:hover {
+                color: #ffffff;
+                text-decoration-line: none;
+                cursor: pointer;
+            }
+
+
+
+
+
+
+        .buttony {
+            margin-left: 455px;
+            width: 75px;
+            height: 40px;
+            border: 1px solid #32CD32;
+            text-align: center;
+            border-radius: 5px;
+            float: left;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .buttonn {
+            margin-left: 25px;
+            width: 75px;
+            height: 40px;
+            border: 1px solid #FF0000;
+            text-align: center;
+            border-radius: 5px;
+            float: left;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .buttony:hover {
+            background-color: #32CD32;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .buttonn:hover {
+            background-color: #FF0000;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+
+
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Ease &amp; Security</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Cars/Index">Cars</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <partial name="_LoginPartial" />
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - RazorPagesCar - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        function yes() {
+            alert("Transaction successful! Redirecting back to Car Page...")
+        }
+        function no() {
+            alert("Transaction cancelled... Redirecting back to Car Page...")
+        }
+    </script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <br />
+    <br />
+    <br />
+    <h1 class="display-4" style="font-size:100px;">
+        <b>
+            Transaction Pending...
+        </b>
+    </h1><br />
+    <h2>Do you want to confirm this transaction? </h2><br />
+</div>
+<div class="button-container">
+    <a class="buttontext" onclick="yes()" href="././Index">
+        <div class="buttony">
+            <p style="padding:6px;">
+                Yes
+            </p>
+        </div>
+    </a>
+    <a class="buttontext" onclick="no()" href="././Index">
+        <div class="buttonn">
+            <p style="padding:6px;">
+                No
+            </p>
+        </div>
+    </a>
+</div>
